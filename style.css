@@ -6,10 +6,10 @@ body {
 }
 
 .topbar {
-  background: #004aad; /* azul forte */
+  background: #004aad; 
   padding: 15px;
   text-align: center;
-  color: white; /* texto branco */
+  color: white; 
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -75,7 +75,6 @@ body {
   border-color: #004aad;
 }
 
-/* Estilos para o contador de quantidade */
 .quantity-selector {
   margin: 20px 0;
 }
@@ -122,7 +121,6 @@ body {
   -moz-appearance: textfield;
 }
 
-/* Remove as setas do input number */
 #quantity::-webkit-outer-spin-button,
 #quantity::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -156,12 +154,12 @@ body {
 }
 
 .buy {
-  background: #006400; /* verde escuro */
+  background: #006400; 
   color: white;
 }
 
 .buy:hover {
-  background: #004d00; /* verde ainda mais escuro */
+  background: #004d00;
 }
 
 .descricao {
@@ -173,7 +171,6 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Novos estilos para as seções de loja e detalhes */
 .store-info, .product-details {
   max-width: 900px;
   margin: 20px auto;
