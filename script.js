@@ -35,4 +35,22 @@ function comprar() {
 
 document.addEventListener('DOMContentLoaded', function() {
   updateTotal();
+
+  let cartCount = 0;
+  const cartCountSpan = document.getElementById('cart-count');
+  const addToCartBtn = document.getElementById('add-to-cart');
+  if (addToCartBtn) {
+    addToCartBtn.addEventListener('click', function() {
+      cartCount += 1;
+      cartCountSpan.textContent = cartCount;
+    });
+  }
+
+  const cartIcon = document.getElementById('cart-icon-container');
+  if (cartIcon) {
+    cartIcon.addEventListener('click', function() {
+      cartCount = 0;
+      cartCountSpan.textContent = cartCount;
+    });
+  }
 });
