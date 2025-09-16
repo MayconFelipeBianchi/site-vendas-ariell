@@ -1,0 +1,242 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.topbar {
+  background: #004aad; /* azul forte */
+  padding: 15px;
+  text-align: center;
+  color: white; /* texto branco */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.gallery {
+  flex: 1;
+}
+
+#main-img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbs img {
+  width: 70px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+
+.thumbs img:hover {
+  border-color: #004aad;
+}
+
+.info {
+  flex: 1;
+}
+
+.info h2 {
+  margin-top: 0;
+}
+
+.price {
+  font-size: 1.8rem;
+  color: #e53935;
+  margin: 10px 0;
+}
+
+.options button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.options button:hover {
+  border-color: #004aad;
+}
+
+/* Estilos para o contador de quantidade */
+.quantity-selector {
+  margin: 20px 0;
+}
+
+.quantity-selector label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.qty-minus, .qty-plus {
+  width: 36px;
+  height: 36px;
+  background: #f0f0f0;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-minus:hover, .qty-plus:hover {
+  background: #e0e0e0;
+}
+
+#quantity {
+  width: 50px;
+  height: 36px;
+  text-align: center;
+  border: none;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  font-size: 16px;
+  -moz-appearance: textfield;
+}
+
+/* Remove as setas do input number */
+#quantity::-webkit-outer-spin-button,
+#quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.total-price {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border-left: 4px solid #004aad;
+}
+
+.buy-buttons {
+  margin-top: 20px;
+}
+
+.cart, .buy {
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.cart {
+  background: #f0f0f0;
+  margin-right: 10px;
+}
+
+.buy {
+  background: #006400; /* verde escuro */
+  color: white;
+}
+
+.buy:hover {
+  background: #004d00; /* verde ainda mais escuro */
+}
+
+.descricao {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Novos estilos para as seções de loja e detalhes */
+.store-info, .product-details {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.store-info h3, .product-details h3 {
+  margin-top: 0;
+  color: #004aad;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.store-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.stat-item {
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #004aad;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.product-details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.product-details th, .product-details td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.product-details th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  width: 30%;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}

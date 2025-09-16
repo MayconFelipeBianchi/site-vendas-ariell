@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Vendas - Ginkgo Biloba</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="topbar">
+    <h1>Bonde das Oncinhas</h1>
+  </header>
+
+  <!-- Container principal -->
+  <main class="container">
+    <!-- Galeria -->
+    <section class="gallery">
+      <!-- Imagem inicial padrão -->
+      <img id="main-img" src="Ginkgo.png" alt="Produto principal">
+    </section>
+
+    <!-- Informações -->
+    <section class="info">
+      <h2>Ginkgo Biloba Premium 700mg - 90 cápsulas</h2>
+      <p class="rating">⭐⭐⭐⭐⭐ (48 avaliações)</p>
+      <p class="price">R$ <span id="preco">40,65</span></p>
+
+      <p><strong>Frete grátis</strong> acima de R$10</p>
+
+      <div class="options">
+        <label>Escolha o Kit:</label>
+        <button onclick="selecionarKit('Kit 1', 40.65, 'Kit1.png')">KIT 1</button>
+        <button onclick="selecionarKit('Kit 2', 78.90, 'Kit2.png')">KIT 2</button>
+        <button onclick="selecionarKit('Kit 3', 113.37, 'Kit3.png')">KIT 3</button>
+      </div>
+
+      <!-- Contador de quantidade -->
+      <div class="quantity-selector">
+        <label>Quantidade:</label>
+        <div class="quantity-control">
+          <button class="qty-minus" onclick="changeQuantity(-1)">-</button>
+          <input type="number" id="quantity" value="1" min="1" onchange="updateTotal()">
+          <button class="qty-plus" onclick="changeQuantity(1)">+</button>
+        </div>
+      </div>
+
+      <!-- Preço total -->
+      <div class="total-price">
+        <strong>Total: R$ <span id="total">40,65</span></strong>
+      </div>
+
+      <div class="buy-buttons">
+        <button class="cart">Adicionar ao carrinho</button>
+        <button class="buy" onclick="comprar()">Comprar agora</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Informações da Loja -->
+  <section class="store-info">
+    <h3>Informações da Loja</h3>
+    <div class="store-stats">
+      <div class="stat-item">
+        <div class="stat-value">25,9ml</div>
+        <div class="stat-label">Avaliações</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">167</div>
+        <div class="stat-label">Produtos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">63%</div>
+        <div class="stat-label">Taxa de Resposta</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">5 anos</div>
+        <div class="stat-label">No site</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">11,1ml</div>
+        <div class="stat-label">Seguidores</div>
+      </div>
+    </div>
+    <p><strong>Último Login:</strong> Online agora!</p>
+    <p><strong>Geralmente Responde:</strong>Sempre!</p>
+  </section>
+
+  <!-- Detalhes do Produto -->
+  <section class="product-details">
+    <h3>Detalhes do Produto</h3>
+    <table>
+      <tr>
+        <th>Categoria</th>
+        <td>Saúde > Suplementos Alimentares > Bem-Estar</td>
+      </tr>
+      <tr>
+        <th>Marca</th>
+        <td>Carteiro de Ervas</td>
+      </tr>
+      <tr>
+        <th>Função</th>
+        <td>Suplemento para Bem-Estar do Cérebro e Memória</td>
+      </tr>
+      <tr>
+        <th>Fase da Vida</th>
+        <td>Adulto</td>
+      </tr>
+      <tr>
+        <th>País de Origem</th>
+        <td>Brasil</td>
+      </tr>
+      <tr>
+        <th>Gênero</th>
+        <td>Unissex</td>
+      </tr>
+      <tr>
+        <th>Forma de Consumo</th>
+        <td>Cápsulas</td>
+      </tr>
+      <tr>
+        <th>Quantidade</th>
+        <td>60</td>
+      </tr>
+      <tr>
+        <th>Envio de</th>
+        <td>Cascavel - PR</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Descrição -->
+  <section class="descricao">
+    <h3>Descrição do Produto</h3>
+    <p>
+      O Ginkgo Biloba Premium é um suplemento natural que auxilia na memória, foco, circulação e bem-estar.
+      Formulado com extrato concentrado de alta qualidade (700mg por cápsula), pode ajudar na prevenção de
+      tonturas, zumbidos no ouvido (tinnitus) e sensação de pernas cansadas.
+    </p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© Loja Bonde das Oncinhas LTDA</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
