@@ -1,3 +1,30 @@
+.preco-opcao {
+  margin-bottom: 10px;
+}
+.preco-grande {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+}
+.preco-pix-label, .preco-cartao-label {
+  font-size: 1rem;
+  color: #666;
+  margin-left: 6px;
+}
+.preco-pix {
+  margin-bottom: 4px;
+}
+.preco-cartao {
+  margin-bottom: 4px;
+}
+.preco-parcela {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 4px;
+}
+.preco-parcela-valor {
+  font-weight: bold;
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;

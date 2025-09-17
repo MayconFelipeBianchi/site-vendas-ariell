@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="topbar">
-    <h1>Bonde das Oncinhas</h1>
+    <h1>Enf.Naturais</h1>
     <div id="cart-icon-container">
       <span id="cart-count">0</span>
       <svg id="cart-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M7 20a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM7.16 16h9.68c.8 0 1.51-.48 1.82-1.21l3.24-7.05A1 1 0 0 0 21 6H6.21l-.94-2.36A1 1 0 0 0 4.34 2H1a1 1 0 1 0 0 2h2.34l3.6 9.05-1.35 2.44C4.52 16.37 5.48 18 7.16 18zm12.24-8-2.76 6H8.53l1.1-2h7.45a1 1 0 1 0 0-2H9.53l-.94-2h10.81z"/></svg>
@@ -17,21 +17,60 @@
 
   <main class="container">
     <section class="gallery">
-      <img id="main-img" src="Ginkgo.png" alt="Produto principal">
+  <img id="main-img" src="imagemprincipal.png" alt="Produto principal">
+  <div class="thumbs" id="thumbs-100g" style="display:none; margin-top:10px;">
+    <img src="cha100g.png" alt="Chá 100g" onclick="document.getElementById('main-img').src='cha100g.png'">
+    <img src="imagemprincipal.png" alt="Imagem Principal" onclick="document.getElementById('main-img').src='imagemprincipal.png'">
+    <img src="ImagemPrincipal2.png" alt="Imagem Principal 2" onclick="document.getElementById('main-img').src='ImagemPrincipal2.png'">
+  </div>
     </section>
 
     <section class="info">
-      <h2>Ginkgo Biloba Premium 700mg - 90 cápsulas</h2>
+  <h2 id="product-title">Ginkgo Biloba Premium 700mg - 90 cápsulas</h2>
       <p class="rating">⭐⭐⭐⭐⭐ (48 avaliações)</p>
-      <p class="price">R$ <span id="preco">40,65</span></p>
+      <div id="precos-bloco">
+        <div class="preco-opcao" id="preco-100g">
+          <div class="preco-pix"><span class="preco-grande">R$ 13,42</span> <span class="preco-pix-label">no pix</span></div>
+          <div class="preco-cartao"><span class="preco-grande">R$ 13,83</span> <span class="preco-cartao-label">no cartão</span></div>
+          <div class="preco-parcela">2x de <span class="preco-parcela-valor">R$ 6,92</span> sem juros</div>
+        </div>
+        <div class="preco-opcao" id="preco-40mg" style="display:none">
+          <div class="preco-pix"><span class="preco-grande">R$ 26,12</span> <span class="preco-pix-label">no pix</span></div>
+          <div class="preco-cartao"><span class="preco-grande">R$ 27,50</span> <span class="preco-cartao-label">no cartão</span></div>
+          <div class="preco-parcela">3x de <span class="preco-parcela-valor">R$ 9,17</span></div>
+        </div>
+        <div class="preco-opcao" id="preco-80mg" style="display:none">
+          <div class="preco-pix"><span class="preco-grande">R$ 27,12</span> <span class="preco-pix-label">no pix</span></div>
+          <div class="preco-cartao"><span class="preco-grande">R$ 28,50</span> <span class="preco-cartao-label">no cartão</span></div>
+          <div class="preco-parcela">3x de <span class="preco-parcela-valor">R$ 9,50</span></div>
+        </div>
+        <div class="preco-opcao" id="preco-120mg" style="display:none">
+          <div class="preco-pix"><span class="preco-grande">R$ 28,50</span> <span class="preco-pix-label">no pix</span></div>
+          <div class="preco-cartao"><span class="preco-grande">R$ 30,00</span> <span class="preco-cartao-label">no cartão</span></div>
+          <div class="preco-parcela">3x de <span class="preco-parcela-valor">R$ 10,00</span></div>
+        </div>
+      </div>
 
       <p><strong>Frete grátis</strong> acima de R$10</p>
 
       <div class="options">
-        <label>Escolha o Kit:</label>
-        <button onclick="selecionarKit('Kit 1', 40.65, 'Kit1.png')">KIT 1</button>
-        <button onclick="selecionarKit('Kit 2', 78.90, 'Kit2.png')">KIT 2</button>
-        <button onclick="selecionarKit('Kit 3', 113.37, 'Kit3.png')">KIT 3</button>
+        <label>Escolha o Produto:</label>
+  <button onclick="selecionarKit('100g', 40.65, 'cha100g.png', 'Chá de Ginkgo Biloba 100g')">100g</button>
+  <script>
+    // Exibe as miniaturas apenas ao selecionar o produto 100g
+    function selecionarKit(nome, preco, imagem, titulo) {
+      // ...código original...
+      if (nome === '100g') {
+        document.getElementById('thumbs-100g').style.display = '';
+      } else {
+        document.getElementById('thumbs-100g').style.display = 'none';
+      }
+      // ...restante do código original...
+    }
+  </script>
+  <button onclick="selecionarKit('40mg', 35.00, '40mg.png', 'Ginkgo Biloba 40mg - 60 Cápsulas')">40mg</button>
+  <button onclick="selecionarKit('80mg', 60.00, '80mg.png', 'Ginkgo Biloba 80mg - 60 Cápsulas')">80mg</button>
+  <button onclick="selecionarKit('120mg', 85.00, '120mg.png', 'Ginkgo Biloba 120mg - 60 Cápsulas')">120mg</button>
       </div>
 
       <div class="quantity-selector">
@@ -134,7 +173,7 @@
   </section>
 
   <footer>
-    <p>© Loja Bonde das Oncinhas LTDA</p>
+    <p>© Enf.Naturais</p>
   </footer>
 
   <script src="script.js"></script>
