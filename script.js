@@ -141,6 +141,18 @@ function selecionarKit(nome, preco, imagem, titulo) {
   if (descDiv && descricoesProduto[nome]) {
     descDiv.innerHTML = descricoesProduto[nome];
   }
+  // Atualiza Forma de Consumo e Quantidade
+  var formaConsumo = document.getElementById('forma-consumo');
+  var quantidadeProduto = document.getElementById('quantidade-produto');
+  if (formaConsumo && quantidadeProduto) {
+    if (nome === '100g') {
+      formaConsumo.textContent = 'Chá';
+      quantidadeProduto.textContent = '100g';
+    } else {
+      formaConsumo.textContent = 'Cápsulas';
+      quantidadeProduto.textContent = '60 unidades';
+    }
+  }
   updateTotal();
 }
 
