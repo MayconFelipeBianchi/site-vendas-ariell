@@ -8,6 +8,9 @@
 </head>
 <body>
   <header class="topbar">
+    <div class="logo-container">
+      <img src="logo-enf-naturais.png" alt="Logo Enfermagem e Naturais" class="logo-enf-naturais">
+    </div>
     <h1>Enf.Naturais</h1>
     <div id="cart-icon-container">
       <span id="cart-count">0</span>
@@ -26,7 +29,7 @@
     </section>
 
     <section class="info">
-  <h2 id="product-title">Ginkgo Biloba Premium 700mg - 90 cápsulas</h2>
+  <h2 id="product-title"></h2>
       <p class="rating">⭐⭐⭐⭐⭐ (48 avaliações)</p>
       <div id="precos-bloco">
         <div class="preco-opcao" id="preco-100g">
@@ -67,6 +70,10 @@
       }
       // ...restante do código original...
     }
+    // Seleciona o primeiro item automaticamente ao carregar a página
+    document.addEventListener('DOMContentLoaded', function() {
+      selecionarKit('100g', 40.65, 'cha100g.png', 'Chá de Ginkgo Biloba 100g');
+    });
   </script>
   <button onclick="selecionarKit('40mg', 35.00, '40mg.png', 'Ginkgo Biloba 40mg - 60 Cápsulas')">40mg</button>
   <button onclick="selecionarKit('80mg', 60.00, '80mg.png', 'Ginkgo Biloba 80mg - 60 Cápsulas')">80mg</button>

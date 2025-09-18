@@ -1,3 +1,22 @@
+.logo-container {
+  position: absolute;
+  top: 5px;
+  left: -30px;
+  width: 210px;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  z-index: 11;
+}
+
+.logo-enf-naturais {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  background: transparent;
+}
 .preco-opcao {
   margin-bottom: 10px;
 }
